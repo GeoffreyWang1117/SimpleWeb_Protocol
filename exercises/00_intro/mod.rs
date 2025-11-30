@@ -8,7 +8,9 @@
 //!
 //! 这些是后续学习网络协议的基础。
 
+#[path = "00_hello.rs"]
 pub mod ex00_hello;
+#[path = "01_bytes.rs"]
 pub mod ex01_bytes;
 
 pub use ex00_hello::*;

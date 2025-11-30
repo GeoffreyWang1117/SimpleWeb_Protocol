@@ -13,8 +13,11 @@
 //! - UDP 端口 53（常规查询）
 //! - TCP 端口 53（大型响应或区域传输）
 
+#[path = "00_header.rs"]
 pub mod ex00_header;
+#[path = "01_question.rs"]
 pub mod ex01_question;
+#[path = "02_response.rs"]
 pub mod ex02_response;
 
 pub use ex00_header::*;

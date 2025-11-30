@@ -7,7 +7,9 @@
 //! - 以太网帧的格式
 //! - EtherType 字段
 
+#[path = "00_mac_address.rs"]
 pub mod ex00_mac_address;
+#[path = "01_frame.rs"]
 pub mod ex01_frame;
 
 pub use ex00_mac_address::*;

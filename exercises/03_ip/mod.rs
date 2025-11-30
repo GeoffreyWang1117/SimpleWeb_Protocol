@@ -7,8 +7,11 @@
 //! - IPv4 头部格式
 //! - IPv6 基础
 
+#[path = "00_ipv4_address.rs"]
 pub mod ex00_ipv4_address;
+#[path = "01_ipv4_header.rs"]
 pub mod ex01_ipv4_header;
+#[path = "02_ipv6.rs"]
 pub mod ex02_ipv6;
 
 pub use ex00_ipv4_address::*;

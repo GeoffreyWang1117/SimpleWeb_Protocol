@@ -17,7 +17,9 @@
 //! - 在线游戏
 //! - IoT 设备通信
 
+#[path = "00_header.rs"]
 pub mod ex00_header;
+#[path = "01_socket.rs"]
 pub mod ex01_socket;
 
 pub use ex00_header::*;

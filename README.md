@@ -6,17 +6,39 @@
 
 本项目按照网络协议栈的层次，由底层到上层、由简单到复杂的顺序组织：
 
+### 基础篇
+
 | 章节 | 主题 | 难度 | 描述 |
 |------|------|------|------|
 | 00 | intro | ⭐ | 入门：Rust 基础与字节操作 |
 | 01 | binary | ⭐⭐ | 二进制基础：位操作、字节序、校验和 |
+
+### 协议栈篇
+
+| 章节 | 主题 | 难度 | 描述 |
+|------|------|------|------|
 | 02 | ethernet | ⭐⭐ | 数据链路层：以太网帧、MAC 地址 |
 | 03 | ip | ⭐⭐⭐ | 网络层：IPv4/IPv6 协议 |
 | 04 | udp | ⭐⭐⭐ | 传输层：UDP 协议 |
-| 05 | tcp | ⭐⭐⭐⭐ | 传输层：TCP 协议、三次握手、流量控制 |
+| 05 | tcp | ⭐⭐⭐⭐ | 传输层：TCP 协议、三次握手、状态机 |
+
+### 应用层篇
+
+| 章节 | 主题 | 难度 | 描述 |
+|------|------|------|------|
 | 06 | dns | ⭐⭐⭐ | 应用层：DNS 协议 |
 | 07 | http | ⭐⭐⭐⭐ | 应用层：HTTP/1.1 协议 |
 | 08 | websocket | ⭐⭐⭐⭐ | 应用层：WebSocket 协议 |
+
+### 高级篇
+
+| 章节 | 主题 | 难度 | 描述 |
+|------|------|------|------|
+| 09 | framing | ⭐⭐⭐ | 消息分帧：定长、分隔符、长度前缀、TLV |
+| 10 | reliability | ⭐⭐⭐⭐ | 可靠性：心跳、ACK重传、滑动窗口、拥塞控制 |
+| 11 | socket_api | ⭐⭐⭐ | Socket API：选项、非阻塞I/O、原始套接字 |
+| 12 | io_multiplexing | ⭐⭐⭐⭐ | I/O多路复用：select、poll、epoll、事件循环 |
+| 13 | quic | ⭐⭐⭐⭐⭐ | 现代协议：QUIC、流复用、0-RTT、连接迁移 |
 
 ## 🚀 开始学习
 
@@ -121,7 +143,12 @@ rust-network-protocols/
     ├── 05_tcp/             # TCP 协议
     ├── 06_dns/             # DNS 协议
     ├── 07_http/            # HTTP 协议
-    └── 08_websocket/       # WebSocket 协议
+    ├── 08_websocket/       # WebSocket 协议
+    ├── 09_framing/         # 消息分帧
+    ├── 10_reliability/     # 可靠性机制
+    ├── 11_socket_api/      # Socket API
+    ├── 12_io_multiplexing/ # I/O 多路复用
+    └── 13_quic/            # QUIC 协议
 ```
 
 ## 💡 学习建议
@@ -133,12 +160,25 @@ rust-network-protocols/
 
 ## 📖 推荐资源
 
+### 基础协议
 - [RFC 791 - Internet Protocol (IPv4)](https://tools.ietf.org/html/rfc791)
+- [RFC 8200 - Internet Protocol (IPv6)](https://tools.ietf.org/html/rfc8200)
 - [RFC 793 - Transmission Control Protocol (TCP)](https://tools.ietf.org/html/rfc793)
 - [RFC 768 - User Datagram Protocol (UDP)](https://tools.ietf.org/html/rfc768)
+
+### 应用层协议
 - [RFC 1035 - Domain Names (DNS)](https://tools.ietf.org/html/rfc1035)
-- [RFC 2616 - HTTP/1.1](https://tools.ietf.org/html/rfc2616)
+- [RFC 9110 - HTTP Semantics](https://tools.ietf.org/html/rfc9110)
 - [RFC 6455 - WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
+
+### 现代协议
+- [RFC 9000 - QUIC Transport Protocol](https://tools.ietf.org/html/rfc9000)
+- [RFC 9001 - QUIC TLS](https://tools.ietf.org/html/rfc9001)
+- [RFC 9114 - HTTP/3](https://tools.ietf.org/html/rfc9114)
+
+### 可靠性机制
+- [RFC 5681 - TCP Congestion Control](https://tools.ietf.org/html/rfc5681)
+- [RFC 6298 - TCP RTO Calculation](https://tools.ietf.org/html/rfc6298)
 
 ## 🎯 目标
 
@@ -148,6 +188,9 @@ rust-network-protocols/
 - ✅ 手动解析和构造各层协议的数据包
 - ✅ 使用 Rust 实现简单的网络应用
 - ✅ 理解 TCP/IP 协议族的核心概念
+- ✅ 掌握消息分帧和可靠性机制的设计
+- ✅ 理解高性能 I/O 多路复用技术
+- ✅ 了解 QUIC 等现代传输协议
 - ✅ 为更高级的网络编程打下坚实基础
 
 ## 📜 许可证

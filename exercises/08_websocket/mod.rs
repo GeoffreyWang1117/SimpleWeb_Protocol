@@ -16,7 +16,9 @@
 //! - 股票行情
 //! - 协作编辑
 
+#[path = "00_frame.rs"]
 pub mod ex00_frame;
+#[path = "01_handshake.rs"]
 pub mod ex01_handshake;
 
 pub use ex00_frame::*;

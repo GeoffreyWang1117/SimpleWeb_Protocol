@@ -120,3 +120,108 @@ hint = "WebSocket帧包含: FIN位 + opcode + mask + payload"
 name = "websocket/handshake"
 path = "exercises/08_websocket/01_handshake.rs"
 hint = "WebSocket握手使用HTTP Upgrade机制"
+
+# 第9章: 消息分帧
+[[exercises]]
+name = "framing/fixed_length"
+path = "exercises/09_framing/00_fixed_length.rs"
+hint = "固定长度分帧简单但浪费空间"
+
+[[exercises]]
+name = "framing/delimiter"
+path = "exercises/09_framing/01_delimiter.rs"
+hint = "使用分隔符需要考虑转义问题"
+
+[[exercises]]
+name = "framing/length_prefixed"
+path = "exercises/09_framing/02_length_prefixed.rs"
+hint = "长度前缀是最常用的分帧方式"
+
+[[exercises]]
+name = "framing/codec"
+path = "exercises/09_framing/03_codec.rs"
+hint = "Codec组合了编码器和解码器"
+
+# 第10章: 可靠性机制
+[[exercises]]
+name = "reliability/heartbeat"
+path = "exercises/10_reliability/00_heartbeat.rs"
+hint = "心跳用于检测连接是否存活"
+
+[[exercises]]
+name = "reliability/ack_retransmit"
+path = "exercises/10_reliability/01_ack_retransmit.rs"
+hint = "超时重传需要合理的RTO计算"
+
+[[exercises]]
+name = "reliability/sliding_window"
+path = "exercises/10_reliability/02_sliding_window.rs"
+hint = "滑动窗口实现流量控制"
+
+[[exercises]]
+name = "reliability/congestion"
+path = "exercises/10_reliability/03_congestion.rs"
+hint = "拥塞控制防止网络过载"
+
+# 第11章: Socket API
+[[exercises]]
+name = "socket_api/basics"
+path = "exercises/11_socket_api/00_basics.rs"
+hint = "Socket是网络编程的基础抽象"
+
+[[exercises]]
+name = "socket_api/options"
+path = "exercises/11_socket_api/01_options.rs"
+hint = "TCP_NODELAY禁用Nagle算法降低延迟"
+
+[[exercises]]
+name = "socket_api/nonblocking"
+path = "exercises/11_socket_api/02_nonblocking.rs"
+hint = "非阻塞IO返回WouldBlock而不是阻塞"
+
+[[exercises]]
+name = "socket_api/raw_socket"
+path = "exercises/11_socket_api/03_raw_socket.rs"
+hint = "原始套接字需要root权限"
+
+# 第12章: I/O多路复用
+[[exercises]]
+name = "io_multiplexing/select"
+path = "exercises/12_io_multiplexing/00_select.rs"
+hint = "select有1024个fd的限制"
+
+[[exercises]]
+name = "io_multiplexing/poll"
+path = "exercises/12_io_multiplexing/01_poll.rs"
+hint = "poll没有fd数量限制但仍需遍历"
+
+[[exercises]]
+name = "io_multiplexing/epoll"
+path = "exercises/12_io_multiplexing/02_epoll.rs"
+hint = "epoll是O(1)的事件通知机制"
+
+[[exercises]]
+name = "io_multiplexing/event_loop"
+path = "exercises/12_io_multiplexing/03_event_loop.rs"
+hint = "事件循环是异步编程的基础"
+
+# 第13章: QUIC协议
+[[exercises]]
+name = "quic/basics"
+path = "exercises/13_quic/00_basics.rs"
+hint = "QUIC使用连接ID而非IP:Port标识连接"
+
+[[exercises]]
+name = "quic/streams"
+path = "exercises/13_quic/01_streams.rs"
+hint = "QUIC流ID的低2位编码了发起方和类型"
+
+[[exercises]]
+name = "quic/handshake"
+path = "exercises/13_quic/02_handshake.rs"
+hint = "QUIC集成TLS 1.3实现1-RTT握手"
+
+[[exercises]]
+name = "quic/migration"
+path = "exercises/13_quic/03_migration.rs"
+hint = "连接迁移需要路径验证"

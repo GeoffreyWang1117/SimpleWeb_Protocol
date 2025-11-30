@@ -7,8 +7,11 @@
 //! - 字节序（大端序与小端序）
 //! - 校验和计算
 
+#[path = "00_bits.rs"]
 pub mod ex00_bits;
+#[path = "01_endianness.rs"]
 pub mod ex01_endianness;
+#[path = "02_checksum.rs"]
 pub mod ex02_checksum;
 
 pub use ex00_bits::*;

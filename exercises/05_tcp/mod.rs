@@ -16,9 +16,13 @@
 //! - 三次握手和四次挥手
 //! - TCP 状态机
 
+#[path = "00_header.rs"]
 pub mod ex00_header;
+#[path = "01_flags.rs"]
 pub mod ex01_flags;
+#[path = "02_handshake.rs"]
 pub mod ex02_handshake;
+#[path = "03_state_machine.rs"]
 pub mod ex03_state_machine;
 
 pub use ex00_header::*;

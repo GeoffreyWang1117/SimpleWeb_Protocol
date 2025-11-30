@@ -15,8 +15,11 @@
 //! - HTTP 响应解析和构建
 //! - 简单的 HTTP 客户端
 
+#[path = "00_request.rs"]
 pub mod ex00_request;
+#[path = "01_response.rs"]
 pub mod ex01_response;
+#[path = "02_client.rs"]
 pub mod ex02_client;
 
 pub use ex00_request::*;
