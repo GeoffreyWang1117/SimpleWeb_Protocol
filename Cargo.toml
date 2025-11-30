@@ -1,0 +1,28 @@
+[package]
+name = "rust-network-protocols"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "Learn network protocols from scratch with Rust - A rustlings-style interactive tutorial"
+license = "MIT"
+
+[dependencies]
+# 用于彩色输出
+colored = "2.1"
+# 用于解析练习配置
+toml = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+# 用于测试
+assert_cmd = "2.0"
+
+[[bin]]
+name = "netlings"
+path = "src/main.rs"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3

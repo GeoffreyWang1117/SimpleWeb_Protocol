@@ -1,0 +1,122 @@
+# Rust Network Protocols 练习配置
+# 每个练习包含: name(名称), path(文件路径), hint(提示)
+
+[[exercises]]
+name = "intro/hello"
+path = "exercises/00_intro/00_hello.rs"
+hint = "这是一个热身练习，让你熟悉项目结构"
+
+[[exercises]]
+name = "intro/bytes"
+path = "exercises/00_intro/01_bytes.rs"
+hint = "使用 &[u8] 来表示字节切片"
+
+[[exercises]]
+name = "binary/bits"
+path = "exercises/01_binary/00_bits.rs"
+hint = "使用 & 和 >> 操作符来获取特定位"
+
+[[exercises]]
+name = "binary/endianness"
+path = "exercises/01_binary/01_endianness.rs"
+hint = "网络字节序是大端序 (Big Endian)"
+
+[[exercises]]
+name = "binary/checksum"
+path = "exercises/01_binary/02_checksum.rs"
+hint = "互联网校验和是将所有16位字相加后取反"
+
+[[exercises]]
+name = "ethernet/mac_address"
+path = "exercises/02_ethernet/00_mac_address.rs"
+hint = "MAC地址是6个字节，通常用冒号分隔的十六进制表示"
+
+[[exercises]]
+name = "ethernet/frame"
+path = "exercises/02_ethernet/01_frame.rs"
+hint = "以太网帧包含: 目标MAC + 源MAC + 类型 + 数据 + FCS"
+
+[[exercises]]
+name = "ip/ipv4_address"
+path = "exercises/03_ip/00_ipv4_address.rs"
+hint = "IPv4地址是4个字节，用点分十进制表示"
+
+[[exercises]]
+name = "ip/ipv4_header"
+path = "exercises/03_ip/01_ipv4_header.rs"
+hint = "IPv4头部最小20字节，查看RFC 791了解详细结构"
+
+[[exercises]]
+name = "ip/ipv6"
+path = "exercises/03_ip/02_ipv6.rs"
+hint = "IPv6地址是16个字节，用冒号分隔的十六进制表示"
+
+[[exercises]]
+name = "udp/header"
+path = "exercises/04_udp/00_header.rs"
+hint = "UDP头部只有8个字节：源端口+目标端口+长度+校验和"
+
+[[exercises]]
+name = "udp/socket"
+path = "exercises/04_udp/01_socket.rs"
+hint = "使用 std::net::UdpSocket"
+
+[[exercises]]
+name = "tcp/header"
+path = "exercises/05_tcp/00_header.rs"
+hint = "TCP头部最小20字节，包含序列号、确认号、标志位等"
+
+[[exercises]]
+name = "tcp/flags"
+path = "exercises/05_tcp/01_flags.rs"
+hint = "TCP标志位: SYN, ACK, FIN, RST, PSH, URG"
+
+[[exercises]]
+name = "tcp/handshake"
+path = "exercises/05_tcp/02_handshake.rs"
+hint = "三次握手: SYN -> SYN-ACK -> ACK"
+
+[[exercises]]
+name = "tcp/state_machine"
+path = "exercises/05_tcp/03_state_machine.rs"
+hint = "TCP有11种状态，参考RFC 793的状态转换图"
+
+[[exercises]]
+name = "dns/header"
+path = "exercises/06_dns/00_header.rs"
+hint = "DNS头部固定12字节"
+
+[[exercises]]
+name = "dns/question"
+path = "exercises/06_dns/01_question.rs"
+hint = "域名使用长度前缀编码，以0结尾"
+
+[[exercises]]
+name = "dns/response"
+path = "exercises/06_dns/02_response.rs"
+hint = "DNS响应包含Answer、Authority、Additional三个部分"
+
+[[exercises]]
+name = "http/request"
+path = "exercises/07_http/00_request.rs"
+hint = "HTTP请求格式: 方法 路径 版本\\r\\n头部\\r\\n\\r\\n正文"
+
+[[exercises]]
+name = "http/response"
+path = "exercises/07_http/01_response.rs"
+hint = "HTTP响应格式: 版本 状态码 原因\\r\\n头部\\r\\n\\r\\n正文"
+
+[[exercises]]
+name = "http/client"
+path = "exercises/07_http/02_client.rs"
+hint = "使用TcpStream发送HTTP请求"
+
+[[exercises]]
+name = "websocket/frame"
+path = "exercises/08_websocket/00_frame.rs"
+hint = "WebSocket帧包含: FIN位 + opcode + mask + payload"
+
+[[exercises]]
+name = "websocket/handshake"
+path = "exercises/08_websocket/01_handshake.rs"
+hint = "WebSocket握手使用HTTP Upgrade机制"
