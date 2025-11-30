@@ -1,0 +1,14 @@
+# Rust build directory
+/target/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Debug
+*.pdb
