@@ -23,6 +23,7 @@
 //! - 确认与重传
 //! - 滑动窗口
 //! - 拥塞控制基础
+//! - 选择性确认 (SACK)
 
 #[path = "00_heartbeat.rs"]
 pub mod ex00_heartbeat;
@@ -32,8 +33,11 @@ pub mod ex01_ack_retransmit;
 pub mod ex02_sliding_window;
 #[path = "03_congestion.rs"]
 pub mod ex03_congestion;
+#[path = "04_sack.rs"]
+pub mod ex04_sack;
 
 pub use ex00_heartbeat::*;
 pub use ex01_ack_retransmit::*;
 pub use ex02_sliding_window::*;
 pub use ex03_congestion::*;
+pub use ex04_sack::*;

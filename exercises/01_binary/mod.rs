@@ -6,6 +6,7 @@
 //! - 位操作（获取、设置、清除特定位）
 //! - 字节序（大端序与小端序）
 //! - 校验和计算
+//! - CRC 循环冗余校验
 
 #[path = "00_bits.rs"]
 pub mod ex00_bits;
@@ -13,7 +14,10 @@ pub mod ex00_bits;
 pub mod ex01_endianness;
 #[path = "02_checksum.rs"]
 pub mod ex02_checksum;
+#[path = "03_crc.rs"]
+pub mod ex03_crc;
 
 pub use ex00_bits::*;
 pub use ex01_endianness::*;
 pub use ex02_checksum::*;
+pub use ex03_crc::*;

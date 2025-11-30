@@ -27,6 +27,11 @@ path = "exercises/01_binary/02_checksum.rs"
 hint = "互联网校验和是将所有16位字相加后取反"
 
 [[exercises]]
+name = "binary/crc"
+path = "exercises/01_binary/03_crc.rs"
+hint = "CRC使用多项式除法检测错误，比校验和更可靠"
+
+[[exercises]]
 name = "ethernet/mac_address"
 path = "exercises/02_ethernet/00_mac_address.rs"
 hint = "MAC地址是6个字节，通常用冒号分隔的十六进制表示"
@@ -50,6 +55,11 @@ hint = "IPv4头部最小20字节，查看RFC 791了解详细结构"
 name = "ip/ipv6"
 path = "exercises/03_ip/02_ipv6.rs"
 hint = "IPv6地址是16个字节，用冒号分隔的十六进制表示"
+
+[[exercises]]
+name = "ip/cidr"
+path = "exercises/03_ip/03_cidr.rs"
+hint = "CIDR使用前缀长度表示子网，如192.168.1.0/24"
 
 [[exercises]]
 name = "udp/header"
@@ -112,6 +122,11 @@ path = "exercises/07_http/02_client.rs"
 hint = "使用TcpStream发送HTTP请求"
 
 [[exercises]]
+name = "http/chunked"
+path = "exercises/07_http/03_chunked.rs"
+hint = "分块传输编码允许发送未知长度的响应"
+
+[[exercises]]
 name = "websocket/frame"
 path = "exercises/08_websocket/00_frame.rs"
 hint = "WebSocket帧包含: FIN位 + opcode + mask + payload"
@@ -142,6 +157,11 @@ name = "framing/codec"
 path = "exercises/09_framing/03_codec.rs"
 hint = "Codec组合了编码器和解码器"
 
+[[exercises]]
+name = "framing/varint"
+path = "exercises/09_framing/04_varint.rs"
+hint = "变长整数用于紧凑编码，Protocol Buffers和QUIC都使用它"
+
 # 第10章: 可靠性机制
 [[exercises]]
 name = "reliability/heartbeat"
@@ -162,6 +182,11 @@ hint = "滑动窗口实现流量控制"
 name = "reliability/congestion"
 path = "exercises/10_reliability/03_congestion.rs"
 hint = "拥塞控制防止网络过载"
+
+[[exercises]]
+name = "reliability/sack"
+path = "exercises/10_reliability/04_sack.rs"
+hint = "SACK允许接收方报告不连续的已收数据，提高重传效率"
 
 # 第11章: Socket API
 [[exercises]]
@@ -225,3 +250,8 @@ hint = "QUIC集成TLS 1.3实现1-RTT握手"
 name = "quic/migration"
 path = "exercises/13_quic/03_migration.rs"
 hint = "连接迁移需要路径验证"
+
+[[exercises]]
+name = "quic/flow_control"
+path = "exercises/13_quic/04_flow_control.rs"
+hint = "QUIC提供连接级和流级两层流量控制"

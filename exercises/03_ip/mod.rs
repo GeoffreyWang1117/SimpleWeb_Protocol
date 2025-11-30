@@ -6,6 +6,7 @@
 //! - IPv4 地址的结构和分类
 //! - IPv4 头部格式
 //! - IPv6 基础
+//! - CIDR 表示法
 
 #[path = "00_ipv4_address.rs"]
 pub mod ex00_ipv4_address;
@@ -13,7 +14,10 @@ pub mod ex00_ipv4_address;
 pub mod ex01_ipv4_header;
 #[path = "02_ipv6.rs"]
 pub mod ex02_ipv6;
+#[path = "03_cidr.rs"]
+pub mod ex03_cidr;
 
 pub use ex00_ipv4_address::*;
 pub use ex01_ipv4_header::*;
 pub use ex02_ipv6::*;
+pub use ex03_cidr::*;

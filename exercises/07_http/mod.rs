@@ -14,6 +14,7 @@
 //! - HTTP 请求解析和构建
 //! - HTTP 响应解析和构建
 //! - 简单的 HTTP 客户端
+//! - 分块传输编码
 
 #[path = "00_request.rs"]
 pub mod ex00_request;
@@ -21,7 +22,10 @@ pub mod ex00_request;
 pub mod ex01_response;
 #[path = "02_client.rs"]
 pub mod ex02_client;
+#[path = "03_chunked.rs"]
+pub mod ex03_chunked;
 
 pub use ex00_request::*;
 pub use ex01_response::*;
 pub use ex02_client::*;
+pub use ex03_chunked::*;

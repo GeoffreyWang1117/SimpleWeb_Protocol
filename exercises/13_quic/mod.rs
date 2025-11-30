@@ -40,6 +40,7 @@
 //! - 流复用
 //! - 0-RTT/1-RTT 握手
 //! - 连接迁移
+//! - 流量控制
 
 #[path = "00_basics.rs"]
 pub mod ex00_basics;
@@ -49,8 +50,11 @@ pub mod ex01_streams;
 pub mod ex02_handshake;
 #[path = "03_migration.rs"]
 pub mod ex03_migration;
+#[path = "04_flow_control.rs"]
+pub mod ex04_flow_control;
 
 pub use ex00_basics::*;
 pub use ex01_streams::*;
 pub use ex02_handshake::*;
 pub use ex03_migration::*;
+pub use ex04_flow_control::*;

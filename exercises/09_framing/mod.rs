@@ -21,6 +21,7 @@
 //! - 分隔符分帧
 //! - 长度前缀分帧（TLV格式）
 //! - 混合分帧策略
+//! - 变长整数编码
 
 #[path = "00_fixed_length.rs"]
 pub mod ex00_fixed_length;
@@ -30,8 +31,11 @@ pub mod ex01_delimiter;
 pub mod ex02_length_prefixed;
 #[path = "03_codec.rs"]
 pub mod ex03_codec;
+#[path = "04_varint.rs"]
+pub mod ex04_varint;
 
 pub use ex00_fixed_length::*;
 pub use ex01_delimiter::*;
 pub use ex02_length_prefixed::*;
 pub use ex03_codec::*;
+pub use ex04_varint::*;
