@@ -255,3 +255,66 @@ hint = "连接迁移需要路径验证"
 name = "quic/flow_control"
 path = "exercises/13_quic/04_flow_control.rs"
 hint = "QUIC提供连接级和流级两层流量控制"
+
+# Quizzes - 综合测验 (小型项目级应用题)
+[[exercises]]
+name = "quiz1_ping"
+path = "exercises/quizzes/quiz1_ping.rs"
+hint = """
+这是一个综合练习，实现简易 Ping 工具
+需要用到: ICMP协议、校验和计算、RTT统计
+提示:
+- ICMP校验和是一补数和的一补数
+- Echo Request的type是8，Echo Reply的type是0
+- 记得处理大端序
+"""
+
+[[exercises]]
+name = "quiz2_http_downloader"
+path = "exercises/quizzes/quiz2_http_downloader.rs"
+hint = """
+这是一个综合练习，实现HTTP文件下载器
+需要用到: URL解析、HTTP协议、分块传输、进度追踪
+提示:
+- URL需要解析scheme、host、port、path、query
+- 处理Content-Length和Transfer-Encoding: chunked两种模式
+- 别忘了处理重定向(3xx状态码)
+"""
+
+[[exercises]]
+name = "quiz3_chat_protocol"
+path = "exercises/quizzes/quiz3_chat_protocol.rs"
+hint = """
+这是一个综合练习，设计并实现简易聊天协议
+需要用到: 消息分帧、状态机、会话管理
+提示:
+- 使用长度前缀进行消息分帧
+- 设计清晰的消息类型(Join/Leave/Broadcast/Private等)
+- 实现心跳机制检测断线
+"""
+
+[[exercises]]
+name = "quiz4_dns_client"
+path = "exercises/quizzes/quiz4_dns_client.rs"
+hint = """
+这是一个综合练习，实现DNS查询客户端
+需要用到: DNS协议、二进制解析、指针压缩、缓存
+提示:
+- DNS使用长度前缀编码域名，以0结尾
+- 指针压缩的前两位是11，后14位是偏移量
+- A记录是4字节IPv4，AAAA记录是16字节IPv6
+- 记得实现TTL缓存
+"""
+
+[[exercises]]
+name = "quiz5_reliable_udp"
+path = "exercises/quizzes/quiz5_reliable_udp.rs"
+hint = """
+这是一个综合练习，在UDP上实现可靠传输
+需要用到: 序列号、确认、重传、滑动窗口、拥塞控制
+提示:
+- 实现类似TCP的连接状态机(SYN/SYN-ACK/ACK)
+- 使用RFC 6298的RTO计算算法
+- 慢启动阶段cwnd指数增长，拥塞避免阶段线性增长
+- 3次重复ACK触发快速重传
+"""

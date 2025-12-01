@@ -47,6 +47,16 @@ This project is organized by network protocol layers, from low-level to high-lev
 | 12 | io_multiplexing | ★★★★ | I/O multiplexing: select, poll, epoll, event loop |
 | 13 | quic | ★★★★★ | Modern protocol: QUIC, stream multiplexing, 0-RTT, connection migration, flow control |
 
+#### Quizzes (Mini Projects)
+
+| Quiz | Topic | Difficulty | Description |
+|------|-------|------------|-------------|
+| Quiz 1 | Ping Tool | ★★★★ | ICMP Echo Request/Reply, checksum calculation, RTT statistics |
+| Quiz 2 | HTTP Downloader | ★★★★★ | URL parsing, HTTP client, chunked encoding, progress tracking |
+| Quiz 3 | Chat Protocol | ★★★★★ | Protocol design, message framing, session management, heartbeat |
+| Quiz 4 | DNS Client | ★★★★★ | DNS query/response, name compression, record parsing, caching |
+| Quiz 5 | Reliable UDP | ★★★★★ | Connection state machine, sliding window, congestion control |
+
 ### Getting Started
 
 #### 1. Install Rust
@@ -146,6 +156,16 @@ After completing all exercises, you will be able to:
 | 11 | socket_api | ★★★ | Socket API：选项、非阻塞I/O、原始套接字 |
 | 12 | io_multiplexing | ★★★★ | I/O多路复用：select、poll、epoll、事件循环 |
 | 13 | quic | ★★★★★ | 现代协议：QUIC、流复用、0-RTT、连接迁移、流量控制 |
+
+#### 综合测验 (小型项目)
+
+| 测验 | 主题 | 难度 | 描述 |
+|------|------|------|------|
+| Quiz 1 | Ping 工具 | ★★★★ | ICMP Echo 请求/响应、校验和计算、RTT 统计 |
+| Quiz 2 | HTTP 下载器 | ★★★★★ | URL 解析、HTTP 客户端、分块编码、进度追踪 |
+| Quiz 3 | 聊天协议 | ★★★★★ | 协议设计、消息分帧、会话管理、心跳机制 |
+| Quiz 4 | DNS 客户端 | ★★★★★ | DNS 查询/响应、名称压缩、记录解析、缓存 |
+| Quiz 5 | 可靠 UDP | ★★★★★ | 连接状态机、滑动窗口、拥塞控制 |
 
 ### 开始学习
 
@@ -277,7 +297,8 @@ rust-network-protocols/
     ├── 10_reliability/     # Reliability | 可靠性机制
     ├── 11_socket_api/      # Socket API
     ├── 12_io_multiplexing/ # I/O multiplexing | I/O 多路复用
-    └── 13_quic/            # QUIC protocol | QUIC 协议
+    ├── 13_quic/            # QUIC protocol | QUIC 协议
+    └── quizzes/            # Mini projects | 综合测验
 ```
 
 ## License | 许可证

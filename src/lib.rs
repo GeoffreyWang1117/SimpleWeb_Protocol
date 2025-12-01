@@ -68,3 +68,7 @@ pub mod io_multiplexing;
 
 #[path = "../exercises/13_quic/mod.rs"]
 pub mod quic;
+
+// 综合测验 - 小型项目级别应用题
+#[path = "../exercises/quizzes/mod.rs"]
+pub mod quizzes;
